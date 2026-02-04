@@ -2,116 +2,307 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="short icon" href="introduce_asset/favicon.ico" />
     <title>김명진 | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <!-- HEADER -->
     <header>
-      <h1>김명진</h1>
-      <p>데이터 기반 문제 해결을 좋아하는 개발자</p>
+      <div class="container header-container">
+        <a href="index.html" class="logo">MY PORTFOLIO</a>
+
+        <nav class="nav-menu">
+          <a href="#home">Home</a>
+          <a href="#about">About Me</a>
+          <a href="#skills">Skills</a>
+          <a href="#certificate">Certificate</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- NAV -->
-    <nav>
-      <ul>
-        <li><a href="#about">소개</a></li>
-        <li><a href="#skills">기술</a></li>
-        <li><a href="#projects">프로젝트</a></li>
-        <li><a href="#github">GitHub</a></li>
-        <li><a href="#experience">경험</a></li>
-        <li><a href="#contact">연락처</a></li>
-      </ul>
-    </nav>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        데이터를 기반으로 문제의 본질을 파악하고 기술과 협업을 통해 해결책을
-        만들어가는 개발자입니다.
-      </p>
+    <!-- HOME SECTION -->
+    <section id="home" class="hero-section">
+      <h2 class="typing-text">
+        <span id="hero-text"></span><span id="cursor">|</span>
+      </h2>
+      <p class="hero-subtext">데이터 기반 문제 해결과 개발을 즐기는 개발자</p>
+      <button class="hero-btn" onclick="scrollToSection('about')">
+        자세히 보기
+      </button>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul class="skill-list">
-        <li>HTML / CSS</li>
-        <li>JavaScript</li>
-        <li>Java</li>
-        <li>Python</li>
-        <li>SQL</li>
-      </ul>
-    </section>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <h3>About Me</h3>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2>Projects</h2>
+      <div class="about-box">
+        <div class="about-wrapper">
+          <div class="about-text">
+            <p class="about-highlight">
+              반복되는 문제를 줄이고,<br />
+              더 나은 기술 방식을 통해 나아가는 김명진입니다.
+            </p>
+            <p>
+              <br /><br />
+              저는 데이터를 기반으로 문제의 핵심을 파악하고, 기술과 협업을 통해
+              해결책을 만들어가는 사람입니다. 업무 흐름과 사용자 관점을 함께
+              고려하며 효율적인 방식을 고민해 왔습니다.
+              <br /><br />
+              대학교 산학협력 프로젝트, 공공기관 사업 보조 업무, 자격증 및 전공
+              공부 등의 다양한 IT 실무 경험과 배움을 통해 실무에서 신뢰성과
+              책임감을 가장 중요한 가치라는 것을 배웠습니다.
+              <br /><br />
+              앞으로도 기술이 해결하는 문제와 제공하는 가치를 고민하며, 신뢰받는
+              IT 인재로 성장하고자 합니다.
+            </p>
+          </div>
 
-      <div class="project-card">
-        <h3>Trend Scout : 데이터 수집 및 AI 정제 프로젝트</h3>
-        <p>크롤링 및 AI 활용을 통해 데이터 정제를 자동화한 프로젝트</p>
-
-        <button onclick="openProject()">자세히 보기</button>
+          <div class="about-photo">
+            <img src="introduce_asset/Photo.png" alt="김명진 증명사진" />
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="about-grid">
+        <a href="AboutMe/cover-letter.html" class="about-project-card">
+          <h4>자기소개서</h4>
+        </a>
+        <a
+          href="https://github.com/myeonggoo1026-svg"
+          class="about-project-card"
+        >
+          <h4>GitHub</h4>
+        </a>
+        <a href="AboutMe/about-me.html" class="about-project-card">
+          <h4>개인 이력</h4>
+        </a>
       </div>
     </section>
 
-    <!-- GITHUB -->
-    <section id="github">
-      <h2>GitHub</h2>
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div>HTML/CSS</div>
+        <div>JavaScript</div>
+        <div>Java</div>
+        <div>Spring Boot</div>
+        <div>Gradle</div>
+        <div>Python</div>
+        <div>Pandas</div>
+        <div>Langchain</div>
+        <div>Docker</div>
+        <div>Gradio</div>
+        <div>MySQL</div>
+        <div>Git/GitHub</div>
+        <div>UI/UX Design</div>
+      </div>
+    </section>
 
-      <div class="project-card">
-        <div class="project-header">
-          <h3>GitHub :</h3>
-          <a href="https://github.com/myeonggoo1026-svg" target="_blank">
-            github.com/myeonggoo1026-svg
-          </a>
+    <!-- CERTIFICATE -->
+    <section id="certificate" class="section">
+      <h3>Certificate</h3>
+
+      <div class="resume-box">
+        <div class="resume-row">
+          <div class="content">
+            <strong>데이터분석 준전문가 (ADsP)</strong>
+            <span class="orgname">한국데이터산업진흥원</span>
+          </div>
+          <div class="date-group">
+            <span class="org">(취득일 : 2025.09.05)</span>
+          </div>
         </div>
-        <p>전체 프로젝트 및 실험 코드 저장소</p>
+
+        <div class="resume-row">
+          <div class="content">
+            <strong>정보처리기사</strong>
+            <span class="orgname">한국산업인력공단</span>
+          </div>
+          <div class="date-group">
+            <span class="org">(취득일 : 2025.06.13)</span>
+          </div>
+        </div>
+
+        <div class="resume-row">
+          <div class="content">
+            <strong>한국사능력검정시험 2급</strong>
+            <span class="orgname">국사편찬위원회</span>
+          </div>
+          <div class="date-group">
+            <span class="org">(취득일 : 2024.10.30)</span>
+          </div>
+        </div>
+
+        <div class="resume-row">
+          <div class="content">
+            <strong>TOEIC Speaking IH</strong>
+            <span class="orgname">ETS (Educational Testing Service)</span>
+          </div>
+          <div class="date-group">
+            <span class="org">(취득일 : 2025.01.18)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section">
+      <h3>Projects</h3>
+
+      <div class="project-detail-card">
+        <h4 class="project-title">Band Feedback 프로젝트</h4>
+        <p class="project-subtitle">
+          밴드 합주 후 파트별 피드백을 적을 수 있는 사이트
+        </p>
+        <div class="project-body">
+          <div class="project-image">
+            <img
+              src="introduce_asset/BandFeedback.png"
+              alt="Band Feedback 화면"
+            />
+          </div>
+
+          <div class="project-info">
+            <ul>
+              <li><strong>개발 기간</strong> 2026.02.01 ~ 2022.02.04</li>
+              <li><strong>개발 인원</strong> 1명 (개인 프로젝트)</li>
+              <li><strong>언어</strong> HTML, CSS, JavaScript, Java, SQL</li>
+              <li><strong>서버</strong> Spring Boot (Embedded Tomcat)</li>
+              <li><strong>DBMS</strong> MySQL</li>
+              <li><strong>IDE</strong> Visual Studio Code, IntelliJ</li>
+              <li><strong>프레임워크</strong> Spring Boot, Spring Data JPA</li>
+              <li><strong>라이브러리</strong> Lombok</li>
+            </ul>
+            <a href="Project/band-feedback.html" class="detail-btn">
+              자세히 보기
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="project-detail-card">
+        <h4 class="project-title">My Music 프로젝트</h4>
+
+        <p class="project-subtitle">
+          개인 음악 작업물을 감상할 수 있는 웹 사이트
+        </p>
+
+        <div class="project-body">
+          <div class="project-image">
+            <img
+              src="introduce_asset/MyMusic.png"
+              alt="My Music 프로젝트 화면"
+            />
+          </div>
+          <div class="project-info">
+            <ul>
+              <li><strong>개발 기간</strong> 2026.01.22 ~ 2026.02.01</li>
+              <li><strong>개발 인원</strong> 1명 (개인 프로젝트)</li>
+              <li><strong>언어</strong> HTML, CSS, JavaScript, Java, SQL</li>
+              <li><strong>서버</strong> Spring Boot (Embedded Tomcat)</li>
+              <li><strong>DBMS</strong> MySQL</li>
+              <li><strong>IDE</strong> Visual Studio Code, IntelliJ</li>
+              <li><strong>프레임워크</strong> Spring Boot, Spring Data JPA</li>
+              <li><strong>라이브러리</strong> Lombok</li>
+            </ul>
+            <a href="Project/my-music.html" class="detail-btn"> 자세히 보기 </a>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="project-detail-card">
+        <h4 class="project-title">TrendScout 프로젝트</h4>
+        <p class="project-subtitle">
+          커뮤니티 사이트 데이터를 분석하여 최신 트렌드를 제공하는 서비스
+        </p>
+        <div class="project-body">
+          <div class="project-image">
+            <img
+              src="introduce_asset/TrendScout.png"
+              alt="TrendScout 프로젝트 화면"
+            />
+          </div>
+          <div class="project-info">
+            <ul>
+              <li><strong>개발 기간</strong> 2024.07.22 ~ 2024.08.30</li>
+              <li><strong>개발 인원</strong> 5명 (팀 프로젝트)</li>
+              <li><strong>언어</strong> Python</li>
+              <li><strong>IDE</strong> Visual Studio Code</li>
+              <li>
+                <strong>라이브러리</strong> Firecraw, CrewAI, Pandas, LangChain
+                등
+              </li>
+            </ul>
+            <a href="Project/trend-scout.html" class="detail-btn">
+              자세히 보기
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience">
-      <h2>Experience</h2>
+    <section id="experience" class="section">
+      <h3>Experience</h3>
 
-      <div class="project-card">
-        <h3>경북대 - 계명대 공동 해커톤 대회</h3>
-        <p>
-          벤처 스타트업을 가정해 사업 주제를 선정하고, 사업 보고서와 PPT를
-          제작해 제출 및 발표
-        </p>
+      <div class="experience-grid">
+        <a href="Experience/hackathon.html" class="experience-card">
+          <h4>경북대 - 계명대<br />| 공동 해커톤 대회</h4>
+          <p>
+            제한 시간 내에 아이디어를 구체화하고 벤처 스타트업 사업 기획안을
+            완성
+          </p>
+        </a>
 
-        <button onclick="openProject()">자세히 보기</button>
-      </div>
+        <a href="Experience/composing-club.html" class="experience-card">
+          <h4>경북대학교 총동아리연합회<br />| 작사/작곡 중앙동아리</h4>
+          <p>
+            동아리 회장 및 임원 활동을 통해 동아리 행사 및 공연 기획 등의
+            전체적인 운영 담당
+          </p>
+        </a>
 
-      <div class="project-card">
-        <h3>국방 기술 품질원 데이터 가공 사업</h3>
-        <p>국방 관련 데이터를 기준에 맞게 오류 여부 확인, 분류, 정리</p>
+        <a
+          href="Experience/performance-planning-club.html"
+          class="experience-card"
+        >
+          <h4>경북대학교 예술대학 음악학과<br />| 공연 기획 동아리</h4>
+          <p>동아리 홍보부장 활동을 통해 콘텐츠 기획 및 홍보물 제작 담당</p>
+        </a>
 
-        <button onclick="openProject()">자세히 보기</button>
-      </div>
+        <a href="Experience/defense-data.html" class="experience-card">
+          <h4>국방 기술 품질원<br />| 데이터 가공 사업</h4>
+          <p>국방 관련 데이터를 기준에 맞게 오류 여부 확인, 분류, 정리</p>
+        </a>
 
-      <div class="project-card">
-        <h3>AI 데이터 수집 자동화</h3>
-        <p>공공기록물의 운반 및 분류, 스캔 작업,전산 입력</p>
-
-        <button onclick="openProject()">자세히 보기</button>
+        <a href="Experience/public-data.html" class="experience-card">
+          <h4>부산시립미술관<br />| 공공 기록물 전산화 사업</h4>
+          <p>공공기록물의 운반 및 분류, 스캔 작업, 전산 입력</p>
+        </a>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
-      <h2>Contact</h2>
+
+    <section id="contact" class="contact-section">
+      <h3 class="contactstyle">Contact</h3>
       <p>Email : myoengjin99@naver.com</p>
       <p>GitHub : github.com/myeonggoo1026-svg</p>
     </section>
 
-    <footer>
-      <p>© Kim MyeongJin. All rights reserved.</p>
-    </footer>
-
+    <footer class="footer">&copy; 2026 김명진. All rights reserved.</footer>
     <script src="script.js"></script>
   </body>
 </html>
