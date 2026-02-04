@@ -1,0 +1,165 @@
+/* --- 프로젝트 상세 페이지 --- */
+
+/* --- 공통 헤더 개선 --- */
+header {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e5e7eb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1f2937;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.logo:hover {
+  color: #6b7280;
+  transition: color 0.3s ease;
+}
+
+.project-view-container {
+  max-width: 900px;
+  margin: 120px auto 80px;
+  padding: 0 20px;
+}
+
+.project-view-card {
+  background: #ffffff;
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+/* 제목 영역 */
+.project-view-card .project-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.project-view-card .project-subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 40px;
+  text-align: center;
+  word-break: keep-all;
+}
+
+/* 구분선 */
+.project-view-card hr {
+  border: 0;
+  height: 1px;
+  background: radial-gradient(circle, #d1d5db 0%, rgba(255, 255, 255, 0) 100%);
+  margin-bottom: 40px;
+}
+
+/* 본문 텍스트 제어 */
+.project-view-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.project-view-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid #1f2937;
+  padding-left: 12px;
+}
+
+.project-view-content p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: #374151;
+  margin-bottom: 20px;
+  word-break: keep-all;
+}
+
+.project-view-content ul {
+  background: #f9fafb;
+  padding: 25px 40px;
+  border-radius: 12px;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.project-view-content li {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.project-view-content li::before {
+  content: '•';
+  color: #1f2937;
+  font-weight: bold;
+  position: absolute;
+  left: -20px;
+}
+
+/* --- 공통 푸터 개선 --- */
+.footer {
+  background-color: #f9fafb;
+  padding: 50px 0;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 100px;
+}
+
+/* 상세 페이지 하단 버튼 영역 */
+.view-footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px dashed #e5e7eb;
+
+  /* 버튼을 오른쪽으로 보내는 설정 */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.back-btn {
+  background: #1f2937;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #4b5563;
+}
